@@ -1,5 +1,10 @@
 import React from "react";
+import { Navbar } from "./../components/Navbar";
 
 export const Drop = () => {
-  return <div>Drop</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };

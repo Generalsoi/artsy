@@ -19,18 +19,23 @@ export const Navbar = () => {
           </h1>
         </span>
 
-        <ul className="md:flex gap-4 md:items-center transition-all duration-500 ease-in">
-          {navLinks.map((navLink) => (
+        <ul className="md:flex gap-8 md:items-center transition-all duration-500 ease-in">
+          {navLinks.map((navLink, index) => (
             <Link to={navLink.link}>
-              <li>{navLink.name}</li>
+              <li
+                key={index}
+                className="text-md border border-x-0 border-t-0 border-b-4 border-b-black"
+              >
+                {navLink.name}
+              </li>
             </Link>
           ))}
         </ul>
 
         <span className="md:flex md:items-center gap-5">
-          <BsSearch />
-          <BsCart />
-          <GrNotification />
+          <BsSearch className="font-extrabold text-xl cursor-pointer" />
+          <BsCart className="font-extrabold text-xl cursor-pointer" />
+          <GrNotification className="font-extrabold text-xl cursor-pointer" />
         </span>
       </div>
     </div>
