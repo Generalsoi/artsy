@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { BsSearch, BsCart } from "react-icons/bs";
 import { GrNotification } from "react-icons/gr";
 
@@ -10,6 +10,10 @@ export const Navbar = () => {
     { name: "Auction", link: "/auctions" },
     { name: "Drop", link: "/drop" },
   ];
+
+  const activeLink = " border border-x-0 border-t-0 border-b-4 border-b-black";
+  const normalLink = "";
+
   return (
     <div className="w-[100%]">
       <div className="w-full md:flex justify-between items-center md:px-20 py-8 fixed">
@@ -21,14 +25,14 @@ export const Navbar = () => {
 
         <ul className="md:flex gap-8 md:items-center transition-all duration-500 ease-in">
           {navLinks.map((navLink, index) => (
-            <Link to={navLink.link}>
-              <li
-                key={index}
-                className="text-md border border-x-0 border-t-0 border-b-4 border-b-black"
-              >
+            <NavLink
+              to={navLink.link}
+              className={({ isActive }) => (isActive ? activeLink : normalLink)}
+            >
+              <li key={index} className="text-md ">
                 {navLink.name}
               </li>
-            </Link>
+            </NavLink>
           ))}
         </ul>
 
