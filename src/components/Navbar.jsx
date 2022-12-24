@@ -25,7 +25,7 @@ export const Navbar = () => {
     <div className="w-[100%] h-screen relative">
       <div
         className={`w-full flex justify-between items-center ${
-          open ? "pl-4" : "pl-[40%] "
+          open ? "pl-4" : "pl-[40%]"
         } pr-4 md:px-20 py-8 fixed top-0`}
       >
         <span
@@ -43,7 +43,7 @@ export const Navbar = () => {
         <ul
           className={`${
             open
-              ? "block h-[70%] backdrop-blur-lg"
+              ? "block h-[70%] backdrop-blur-lg "
               : "hidden h-0 backdrop-blur-none"
           } absolute md:static top-20 left-4 md:flex gap-8 md:items-center transition-all duration-500 ease-in font-satoshi`}
         >
@@ -52,7 +52,10 @@ export const Navbar = () => {
               to={navLink.link}
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
-              <li key={index} className="text-2xl md:text-lg mt-4 mb-6 md:m-0 ">
+              <li
+                key={index}
+                className="text-2xl md:text-lg mt-4 mb-6 mx-0 md:m-0 "
+              >
                 {navLink.name}
               </li>
             </NavLink>
