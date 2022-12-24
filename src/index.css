@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@700&display=swap");
 
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi") url("../SatoshiVariable.ttf") format("truetype");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

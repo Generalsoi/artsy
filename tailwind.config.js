@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         stix: "STIX Two Text, serif",
+        satoshi: "Satoshi, sans",
       },
     },
   },
