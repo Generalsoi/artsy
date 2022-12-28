@@ -1,13 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:wght@700&display=swap");
 
 @font-face {
   font-family: "Satoshi";
-  src: local("Satoshi") url("../SatoshiVariable.ttf") format("truetype");
+  src: url("../SatoshiVariable.ttf");
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: "ClashDisplay";
+  src: url("../ClashDisplay.ttf");
+}
 
 body {
   margin: 0;

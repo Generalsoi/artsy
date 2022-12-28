@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        stix: "STIX Two Text, serif",
-        satoshi: "Satoshi, sans",
+        stix: ["STIX Two Text", "serif"],
+        satoshi: ["Satoshi", "serif"],
+        clashdisplay: ["ClashDisplay", "serif"],
       },
     },
   },
