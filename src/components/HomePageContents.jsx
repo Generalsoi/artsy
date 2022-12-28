@@ -1,4 +1,17 @@
 import React from "react";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import { imageList } from "../helpers/homePageImgList";
+
+// const responsiveSettings = [
+//   {
+//     breakpoint: 900,
+//     settings: {
+//       slidesToShow: 1,
+//       slidesToScroll: 1,
+//     },
+//   },
+// ];
 
 export const HomePageContents = () => {
   return (
@@ -19,6 +32,22 @@ export const HomePageContents = () => {
           access.
         </p>
       </span>
+
+      <div className="mt-10">
+        <Slide
+          slidesToScroll={2}
+          slidesToShow={6}
+          indicators={false}
+          arrows={false}
+          // responsive={responsiveSettings}
+        >
+          {imageList.map((img) => (
+            <div className="mx-4 md:flex items-center justify-center md:h-96 ">
+              <img src={img.url} alt={img.alt} />
+            </div>
+          ))}
+        </Slide>
+      </div>
     </div>
   );
 };
