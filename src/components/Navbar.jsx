@@ -19,13 +19,20 @@ export const Navbar = () => {
 
   const handleClick = () => {
     setOpen(!open);
+    if (open) {
+      window.document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
   };
 
   return (
-    <div className="w-[100%] h-screen relative">
+    <div className={`w-[100%] relative `}>
       <div
         className={`w-full flex justify-between items-center ${
-          open ? "pl-4" : "pl-[40%]"
+          open
+            ? "pl-4 backdrop-blur-lg h-screen "
+            : "pl-[40%] backdrop-filter-none "
         } pr-4 md:px-20 py-8 fixed top-0`}
       >
         <span
@@ -37,14 +44,18 @@ export const Navbar = () => {
           {open ? <GrClose /> : <RxHamburgerMenu />}
         </span>
         <span>
-          <h1 className="uppercase font-[800] font-stix text-2xl">artsy.</h1>
+          <h1
+            className={`uppercase font-[800] font-stix text-2xl ${
+              open ? "absolute top-7 text-3xl" : ""
+            }`}
+          >
+            artsy.
+          </h1>
         </span>
 
         <ul
           className={`${
-            open
-              ? "block h-[70%] backdrop-blur-lg "
-              : "hidden h-0 backdrop-blur-none"
+            open ? "block h-[70%]  " : "hidden h-0"
           } absolute md:static top-20 left-4 md:flex gap-8 md:items-center transition-all duration-500 ease-in font-satoshi`}
         >
           {navLinks.map((navLink, index) => (
