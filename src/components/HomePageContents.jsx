@@ -17,10 +17,10 @@ export const HomePageContents = () => {
   return (
     <div className="mt-20 font-satoshi">
       <div className="w-[100%] py-6">
-        <h1 className="font-clashdisplay font-black text-2xl md:text-5xl text-center mb-4 md:mb-8">
+        <h1 className="font-clashdisplay font-black text-2xl md:text-6xl text-center mb-4 md:mb-8">
           Photography is poetry &
         </h1>
-        <h1 className="font-clashdisplay font-black text-2xl md:text-5xl text-center ">
+        <h1 className="font-clashdisplay font-black text-2xl md:text-6xl text-center ">
           beautiful untold stories
         </h1>
       </div>
