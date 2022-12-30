@@ -18,22 +18,21 @@ export const FeaturedProducts = () => {
       }
     };
     getFeaturedProducts();
-    console.log(featuredProducts);
   });
 
   return (
-    <div className="mt-6 md:px-20">
-      <h1 className="font-bold md:text-3xl mb-4">Featured Products</h1>
+    <div className="mt-6 px-4 md:px-20">
+      <h1 className="font-bold text-2xl md:text-3xl mb-4">Featured Products</h1>
       <hr className="py-6" />
 
       <div>
         <span className="md:flex items-start h-80 gap-5">
           <img
-            className="h-60 md:w-[70%]"
+            className="h-36 md:h-60 w-full md:w-[70%]"
             src={featuredProducts[0].url}
             alt={featuredProducts[0].id}
           />
-          <span>
+          <span className="flex flex-col md:h-60 items-start justify-between">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
@@ -42,14 +41,16 @@ export const FeaturedProducts = () => {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <span>
-              <AiOutlineArrowRight />
-            </span>
+            <div className="w-full flex items-center justify-end">
+              <span className="w-12 h-12 rounded-full flex items-center justify-center border-[#333333] border-2">
+                <AiOutlineArrowRight className="text-2xl" />
+              </span>
+            </div>
           </span>
         </span>
         <hr className="py-6" />
-        <span className="md:flex items-start h-80 gap-5">
-          <span>
+        <span className="flex flex-col-reverse md:flex-row  items-start h-80 gap-5">
+          <span className="flex flex-col md:h-60 items-start justify-between">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
@@ -58,12 +59,14 @@ export const FeaturedProducts = () => {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <span>
-              <AiOutlineArrowRight />
-            </span>
+            <div className="w-full flex items-center justify-end">
+              <span className="w-12 h-12 rounded-full flex items-center justify-center border-[#333333] border-2">
+                <AiOutlineArrowRight className="text-2xl" />
+              </span>
+            </div>
           </span>
           <img
-            className="h-60 md:w-[70%]"
+            className="h-36 md:h-60 w-full md:w-[70%]"
             src={featuredProducts[1].url}
             alt={featuredProducts[1].id}
           />
@@ -71,11 +74,11 @@ export const FeaturedProducts = () => {
         <hr className="py-6" />
         <span className="md:flex items-start h-80 gap-5">
           <img
-            className="h-60 md:w-[70%]"
+            className="h-36 md:h-60 w-full md:w-[70%]"
             src={featuredProducts[2].url}
             alt={featuredProducts[2].id}
           />
-          <span>
+          <span className="flex flex-col md:h-60 items-start justify-between">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
@@ -84,9 +87,11 @@ export const FeaturedProducts = () => {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <span>
-              <AiOutlineArrowRight />
-            </span>
+            <div className="w-full flex items-center justify-end">
+              <span className="w-12 h-12 rounded-full flex items-center justify-center border-[#333333] border-2">
+                <AiOutlineArrowRight className="text-2xl" />
+              </span>
+            </div>
           </span>
         </span>
       </div>

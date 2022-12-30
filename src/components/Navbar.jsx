@@ -19,10 +19,10 @@ export const Navbar = () => {
 
   const handleClick = () => {
     setOpen(!open);
-    if (open) {
+    if (open === false) {
       window.document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "unset";
+      window.document.body.style.overflow = "unset";
     }
   };
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
           open
             ? "pl-4 backdrop-blur-lg h-screen "
             : "pl-[40%] backdrop-filter-none "
-        } pr-4 md:px-20 py-8 fixed top-0 z-20 `}
+        } pr-4 md:px-20 py-8 fixed top-0 z-20 bg-white`}
       >
         <span
           className={`md:hidden text-3xl font-extrabold absolute top-6 ${
