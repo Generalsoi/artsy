@@ -32,7 +32,7 @@ export const FeaturedProducts = () => {
             src={featuredProducts[0].url}
             alt={featuredProducts[0].id}
           />
-          <span className="flex flex-col md:h-60 items-start justify-between">
+          <span className="flex flex-col md:h-60 items-start justify-between mt-4 md:mt-0">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
@@ -48,9 +48,9 @@ export const FeaturedProducts = () => {
             </div>
           </span>
         </span>
-        <hr className="py-6" />
+        <hr className="py-6 mt-4 md:mt-0" />
         <span className="flex flex-col-reverse md:flex-row  items-start h-80 gap-5">
-          <span className="flex flex-col md:h-60 items-start justify-between">
+          <span className="flex flex-col md:h-60 items-start justify-between mt-4 md:mt-0">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
@@ -71,14 +71,14 @@ export const FeaturedProducts = () => {
             alt={featuredProducts[1].id}
           />
         </span>
-        <hr className="py-6" />
+        <hr className="py-6 mt-4 md:mt-0" />
         <span className="md:flex items-start h-80 gap-5">
           <img
             className="h-36 md:h-60 w-full md:w-[70%]"
             src={featuredProducts[2].url}
             alt={featuredProducts[2].id}
           />
-          <span className="flex flex-col md:h-60 items-start justify-between">
+          <span className="flex flex-col md:h-60 items-start justify-between mt-4 md:mt-0">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
               The Boolean Egyptian
             </h2>
