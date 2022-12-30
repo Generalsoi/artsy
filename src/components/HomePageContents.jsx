@@ -2,6 +2,7 @@ import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { imageList } from "../helpers/homePageImgList";
+import { FeaturedProducts } from "./featuredProducts";
 
 // const responsiveSettings = [
 //   {
@@ -41,13 +42,18 @@ export const HomePageContents = () => {
           arrows={false}
           // responsive={responsiveSettings}
         >
-          {imageList.map((img) => (
-            <div className="mx-4 md:flex items-center justify-center md:h-96 ">
+          {imageList.map((img, index) => (
+            <div
+              key={index}
+              className="mx-4 md:flex items-center justify-center md:h-96 "
+            >
               <img src={img.url} alt={img.alt} />
             </div>
           ))}
         </Slide>
       </div>
+
+      <FeaturedProducts />
     </div>
   );
 };

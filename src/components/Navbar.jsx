@@ -33,7 +33,7 @@ export const Navbar = () => {
           open
             ? "pl-4 backdrop-blur-lg h-screen "
             : "pl-[40%] backdrop-filter-none "
-        } pr-4 md:px-20 py-8 fixed top-0`}
+        } pr-4 md:px-20 py-8 fixed top-0 z-20 `}
       >
         <span
           className={`md:hidden text-3xl font-extrabold absolute top-6 ${
@@ -60,13 +60,11 @@ export const Navbar = () => {
         >
           {navLinks.map((navLink, index) => (
             <NavLink
+              key={index}
               to={navLink.link}
               className={({ isActive }) => (isActive ? activeLink : normalLink)}
             >
-              <li
-                key={index}
-                className="text-2xl md:text-lg mt-4 mb-6 mx-0 md:m-0 "
-              >
+              <li className="text-2xl md:text-lg mt-4 mb-6 mx-0 md:m-0 ">
                 {navLink.name}
               </li>
             </NavLink>
