@@ -18,7 +18,8 @@ export const FeaturedProducts = () => {
       }
     };
     getFeaturedProducts();
-  });
+    // console.log(featuredProducts);
+  }, []);
 
   return (
     <div className="mt-6 px-4 md:px-20">
@@ -29,8 +30,8 @@ export const FeaturedProducts = () => {
         <span className="md:flex items-start h-80 gap-5">
           <img
             className="h-36 md:h-60 w-full md:w-[70%]"
-            src={featuredProducts[0].url}
-            alt={featuredProducts[0].id}
+            src={featuredProducts[0]?.url}
+            alt={featuredProducts[0]?.id}
           />
           <span className="flex flex-col md:h-60 items-start justify-between mt-4 md:mt-0">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">
@@ -67,16 +68,16 @@ export const FeaturedProducts = () => {
           </span>
           <img
             className="h-36 md:h-60 w-full md:w-[70%]"
-            src={featuredProducts[1].url}
-            alt={featuredProducts[1].id}
+            src={featuredProducts[1]?.url}
+            alt={featuredProducts[1]?.id}
           />
         </span>
         <hr className="py-6 mt-4 md:mt-0" />
         <span className="md:flex items-start h-80 gap-5">
           <img
             className="h-36 md:h-60 w-full md:w-[70%]"
-            src={featuredProducts[2].url}
-            alt={featuredProducts[2].id}
+            src={featuredProducts[2]?.url}
+            alt={featuredProducts[2]?.id}
           />
           <span className="flex flex-col md:h-60 items-start justify-between mt-4 md:mt-0">
             <h2 className="font-bold text-2xl font-stix tracking-wide mb-4">

@@ -1,20 +1,19 @@
 import React from "react";
-import { Slide } from "react-slideshow-image";
+import Slider from "react-slick";
 import "react-slideshow-image/dist/styles.css";
 import { imageList } from "../helpers/homePageImgList";
 import { FeaturedProducts } from "./featuredProducts";
 
-// const responsiveSettings = [
-//   {
-//     breakpoint: 900,
-//     settings: {
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//     },
-//   },
-// ];
-
 export const HomePageContents = () => {
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    speed: 500,
+  };
   return (
     <div className="mt-20 font-satoshi">
       <div className="w-[100%] py-6">
@@ -35,13 +34,7 @@ export const HomePageContents = () => {
       </span>
 
       <div className="mt-10">
-        <Slide
-          slidesToScroll={2}
-          slidesToShow={6}
-          indicators={false}
-          arrows={false}
-          // responsive={responsiveSettings}
-        >
+        <Slider {...settings}>
           {imageList.map((img, index) => (
             <div
               key={index}
@@ -50,7 +43,7 @@ export const HomePageContents = () => {
               <img src={img.url} alt={img.alt} />
             </div>
           ))}
-        </Slide>
+        </Slider>
       </div>
 
       <FeaturedProducts />
