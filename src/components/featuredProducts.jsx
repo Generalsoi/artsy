@@ -22,7 +22,7 @@ export const FeaturedProducts = () => {
   }, []);
 
   return (
-    <div className="mt-6 px-4 md:px-20">
+    <div className="mt-10 px-4 md:px-20">
       <h1 className="font-bold text-2xl md:text-3xl mb-4">Featured Products</h1>
       <hr className="py-6" />
 
