@@ -60,6 +60,44 @@ export const HomePageContents = () => {
       </div>
 
       <FeaturedProducts />
+
+      {/* see the upcoming actions and exhibitions section here */}
+      <div
+        className="mt-10 h-fit px-4 md:px-20 py-4 md:py-10"
+        style={{
+          background:
+            "linear-gradient(99.99deg, #4693ED -26.21%, #79C2D2 22.16%, rgba(192, 86, 9, 0.49) 111.62%)",
+        }}
+      >
+        <h2 className="font-bold text-white md:text-3xl hidden md:block">
+          See Upcoming Actions and Exhibitions
+        </h2>
+        <hr className="text-white w-[40%] mt-6" />
+
+        <div
+          className="md:flex items-end justify-between"
+          style={{ backgroundImage: 'url("../assets/images/auctionbg.png")' }}
+        >
+          <div>
+            <h3>01</h3>
+            <span>
+              <h2>MONALISA REDEFINED IN STYLE</h2>
+              <p>Start on : 08:00 GTS . Monday </p>
+              <p>
+                GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH
+                INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR
+                HIGHEST AND LOWEST BIDS.
+              </p>
+            </span>
+          </div>
+          <div>
+            <span>
+              <p>See more</p>
+            </span>
+            <button>Set a reminder</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
