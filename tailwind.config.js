@@ -7,6 +7,8 @@ module.exports = {
         stix: ["STIX Two Text", "serif"],
         satoshi: ["Satoshi", "serif"],
         clashdisplay: ["ClashDisplay", "serif"],
+        bellefair: ["Bellefair", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
