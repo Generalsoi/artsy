@@ -3,6 +3,8 @@ import { Homepage } from "./routes/Homepage";
 import { Marketplace } from "./routes/Marketplace";
 import { Auctions } from "./routes/Auctions";
 import { Drop } from "./routes/Drop";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

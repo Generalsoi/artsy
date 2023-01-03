@@ -6,13 +6,26 @@ import { FeaturedProducts } from "./featuredProducts";
 
 export const HomePageContents = () => {
   const settings = {
+    dots: true,
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
-    slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    initialSlide: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
     speed: 500,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="mt-20 font-satoshi">
@@ -33,14 +46,14 @@ export const HomePageContents = () => {
         </p>
       </span>
 
-      <div className="mt-10">
+      <div className="mt-10 w-[100%]">
         <Slider {...settings}>
           {imageList.map((img, index) => (
             <div
               key={index}
-              className="mx-4 md:flex items-center justify-center md:h-96 "
+              className="px-4 mx-0 md:flex items-center justify-center md:h-80 md:w-36 "
             >
-              <img src={img.url} alt={img.alt} />
+              <img src={img.url} alt={img.alt} className="w-fit" />
             </div>
           ))}
         </Slider>

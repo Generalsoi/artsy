@@ -4,6 +4,7 @@ import ImageThree from "../assets/images/imagethree.png";
 import ImageFour from "../assets/images/imagefour.png";
 import ImageFive from "../assets/images/imagefive.jpg";
 import ImageSix from "../assets/images/imagesix.jpg";
+import ImageSeven from "../assets/images/imageseven.jpg";
 
 export const imageList = [
   {
@@ -29,5 +30,9 @@ export const imageList = [
   {
     url: ImageSix,
     alt: "imagesix",
+  },
+  {
+    url: ImageSeven,
+    alt: "imageseven",
   },
 ];
