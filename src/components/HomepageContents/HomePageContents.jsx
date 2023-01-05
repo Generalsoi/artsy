@@ -6,6 +6,7 @@ import { imageList } from "./../../helpers/homePageImgList";
 import { AuctionAndExhibition } from "./auctionAndExhibition";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { TopCreators } from "./topCreators";
 
 export const HomePageContents = () => {
   const settings = {
@@ -87,6 +88,8 @@ export const HomePageContents = () => {
         </span>
         <hr />
       </div>
+
+      <TopCreators />
     </div>
   );
 };
