@@ -23,7 +23,7 @@ export const TopCreators = () => {
           </span>
         </div>
         <span>
-          <p className="mt-10 md:text-4xl font-clashdisplay font-extralight">
+          <p className="mt-10 md:text-3xl font-clashdisplaylight font-extralight">
             “Everything always looked better in black and white. Everything
             always as if it were the first time; there’s always more people in a
             black and white photograph. It just makes it seem that there were

@@ -9,6 +9,7 @@ module.exports = {
         clashdisplay: ["ClashDisplay", "serif"],
         bellefair: ["Bellefair", "serif"],
         poppins: ["Poppins", "sans-serif"],
+        clashdisplaylight: ["ClashDisplayLight", "serif"],
       },
     },
   },

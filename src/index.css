@@ -13,6 +13,11 @@
   src: url("../ClashDisplay.ttf");
 }
 
+@font-face {
+  font-family: "ClashDisplayLight";
+  src: url("../ClashDisplayLight.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
