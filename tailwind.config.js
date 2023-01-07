@@ -10,6 +10,8 @@ module.exports = {
         bellefair: ["Bellefair", "serif"],
         poppins: ["Poppins", "sans-serif"],
         clashdisplaylight: ["ClashDisplayLight", "serif"],
+        baskerville: ["Baskervville", "serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
     },
   },

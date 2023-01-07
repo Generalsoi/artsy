@@ -7,6 +7,7 @@ import { AuctionAndExhibition } from "./auctionAndExhibition";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { TopCreators } from "./topCreators";
+import { Footer } from "../Footer";
 
 export const HomePageContents = () => {
   const settings = {
@@ -90,6 +91,30 @@ export const HomePageContents = () => {
       </div>
 
       <TopCreators />
+
+      {/* newsletter section */}
+      <div className=" w-[100%] md:px-20 md:py-10 px-4 py-6">
+        <div className="mt-10 border border-black h-fit px-4 md:px-20 py-6 md:py-10 text-center">
+          <h2 className="font-baskerville text-xl md:text-4xl mb-4">
+            NEWSLETTER
+          </h2>
+          <p className="md:text-2xl mb-8">
+            Subscribe to get daily updates on new drops & exciting deals{" "}
+          </p>
+          <span className="flex items-center gap-5 font-baskerville justify-center">
+            <input
+              type="text"
+              placeholder="ENTER YOUR EMAIL"
+              className="md:w-fit h-10 border border-black border-2 md:px-10 "
+            />
+            <button className="w-fit h-10 border-none bg-[#333333] px-4 md:px-10 uppercase text-white">
+              subscribe
+            </button>
+          </span>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };
