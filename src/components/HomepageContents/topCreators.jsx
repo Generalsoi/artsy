@@ -1,8 +1,22 @@
 import React from "react";
+import { creatorList } from "../../helpers/creatorList";
+import Slider from "react-slick";
+// import { baseUrl } from "./config";
 
 export const TopCreators = () => {
+  const settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: false,
+  };
+
   return (
-    <div className="bg-[#E2E2E2]">
+    <div className="bg-[#E2E2E2] relative">
       <div className="w-full px-4 py-6 md:px-20 md:py-20">
         <div className="flex items-start justify-between">
           <span>
@@ -31,9 +45,22 @@ export const TopCreators = () => {
             colour photography. Everything looks more exciting.”– Jack Lowden
           </p>
         </span>
-        <span>
-          <h1>1985</h1>
+        <span className="text-right">
+          <h1 className="font-clashdisplay md:text-8xl">1985</h1>
         </span>
+
+        <div className="w-[100%] md:w-[60%] absolute bottom-0 md:-bottom-10 right-4 md:right-15">
+          <Slider {...settings}>
+            {creatorList.map((creator, index) => (
+              <div
+                key={index}
+                className="px-4 mx-0 md:flex items-center justify-end md:w-36  "
+              >
+                <img src={creator.url} alt={creator.alt} className="" />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );
