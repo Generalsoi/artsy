@@ -26,7 +26,7 @@ export const SearchMktPlace = () => {
         <select
           name="sort-options"
           id="sort-options"
-          className="md:h-10 w-fit px-4 font-bold rounded-xl cursor-pointer"
+          className="md:h-10 w-fit px-4 font-bold border-2 border-[#000000] rounded-xl cursor-pointer"
         >
           <option value="">Sort by</option>
           <option value="amount">Amount</option>
