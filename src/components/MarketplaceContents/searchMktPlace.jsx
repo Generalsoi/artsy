@@ -22,7 +22,7 @@ export const SearchMktPlace = () => {
         className="md:flex items-center justify-between py-3 md:px-10 h-16 w-full bg-white rounded-xl"
         style={{ boxShadow: "4px 4px 64px rgba(0, 0, 0, 0.1)" }}
       >
-        <p>See 1-6 of 15 results</p>
+        <p className="hidden md:block">See 1-6 of 15 results</p>
         <select
           name="sort-options"
           id="sort-options"
