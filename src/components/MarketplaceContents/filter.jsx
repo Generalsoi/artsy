@@ -10,6 +10,7 @@ export const Filter = ({ filterContent, filterStyles }) => {
   };
 
   const Category = filterContent.ByCategory;
+  const Price = filterContent.ByPrice;
   console.log(Category);
 
   return (
@@ -28,7 +29,34 @@ export const Filter = ({ filterContent, filterStyles }) => {
           By Category {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </h3>
 
-        <ul>{open && Category?.map((category) => <li>{category}</li>)}</ul>
+        <ul className="mt-6">
+          {open &&
+            Category?.map((category, index) => (
+              <li key={index} className="flex items-center gap-2 mb-3">
+                <input type="checkbox" />
+                {category}
+              </li>
+            ))}
+        </ul>
+      </div>
+
+      <div className="mt-10">
+        <h3
+          className="flex items-center gap-4 cursor-pointer text-xl font-bold"
+          onClick={handleOpen}
+        >
+          By Price {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </h3>
+
+        <ul className="mt-6">
+          {open &&
+            Price?.map((price, index) => (
+              <li key={index} className="flex items-center gap-2 mb-3">
+                <input type="checkbox" />
+                {price}
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   );
