@@ -4,9 +4,14 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export const Filter = ({ filterContent, filterStyles }) => {
   const [open, setOpen] = useState(false);
+  const [opentwo, setOpenTwo] = useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
+  };
+
+  const handleOpenTwo = () => {
+    setOpenTwo(!opentwo);
   };
 
   const Category = filterContent.ByCategory;
@@ -43,13 +48,13 @@ export const Filter = ({ filterContent, filterStyles }) => {
       <div className="mt-10">
         <h3
           className="flex items-center gap-4 cursor-pointer text-xl font-bold"
-          onClick={handleOpen}
+          onClick={handleOpenTwo}
         >
-          By Price {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          By Price {opentwo ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </h3>
 
         <ul className="mt-6">
-          {open &&
+          {opentwo &&
             Price?.map((price, index) => (
               <li key={index} className="flex items-center gap-2 mb-3">
                 <input type="checkbox" />
