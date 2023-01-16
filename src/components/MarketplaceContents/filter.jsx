@@ -63,6 +63,22 @@ export const Filter = ({ filterContent, filterStyles }) => {
             ))}
         </ul>
       </div>
+      <div className="mt-10">
+        <h3
+          className="flex items-center gap-4 cursor-pointer text-xl font-bold"
+          onClick={handleOpenTwo}
+        >
+          By Artist {opentwo ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </h3>
+      </div>
+      <div className="mt-10">
+        <h3
+          className="flex items-center gap-4 cursor-pointer text-xl font-bold"
+          onClick={handleOpenTwo}
+        >
+          Collection Year {opentwo ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </h3>
+      </div>
     </div>
   );
 };
