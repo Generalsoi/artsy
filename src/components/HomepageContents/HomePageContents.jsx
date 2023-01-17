@@ -15,7 +15,7 @@ export const HomePageContents = () => {
     centerMode: true,
     infinite: true,
     slidesToShow: 4,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     initialSlide: 1,
     autoplay: true,
     autoplaySpeed: 2000,
