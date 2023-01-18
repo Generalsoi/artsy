@@ -18,6 +18,24 @@ export const ArtMarketplace = () => {
 
     getProducts();
   }, []);
-  console.log(products);
-  return <div>ArtMarketplace</div>;
+
+  return (
+    <div className="md:flex items-center flex-wrap justify-between gap-5 w-[100%] p-4 md:p-10 font-satoshi">
+      {products.map((product, index) => (
+        <div
+          key={index}
+          className="md:w-[24%] md:h-[26rem] p-4 mb-6 rounded-xl"
+          style={{ boxShadow: "0px 34px 68px rgba(217, 225, 244, 0.36)" }}
+        >
+          <img
+            src={product?.url}
+            alt={product?.name}
+            className="md:h-72 w-full rounded-xl object-cover"
+          />
+          <p className="uppercase mt-2">{product?.name}</p>
+          <h3 className="font-extrabold md:text-xl mt-4">{`$${product.price.usd}`}</h3>
+        </div>
+      ))}
+    </div>
+  );
 };
