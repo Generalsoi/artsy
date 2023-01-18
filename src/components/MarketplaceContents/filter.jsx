@@ -3,8 +3,8 @@ import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export const Filter = ({ filterContent, filterStyles }) => {
-  const [open, setOpen] = useState(false);
-  const [opentwo, setOpenTwo] = useState(false);
+  const [open, setOpen] = useState(true);
+  const [opentwo, setOpenTwo] = useState(true);
 
   const handleOpen = () => {
     setOpen(!open);
