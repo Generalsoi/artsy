@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -11,10 +12,18 @@ export const Footer = () => {
         </h1>
         <span className="hidden md:block">
           <ul>
-            <li className="mb-6 text-xl">Home</li>
-            <li className="mb-6 text-xl">Marketplace</li>
-            <li className="mb-6 text-xl">Auctions</li>
-            <li className="mb-6 text-xl">Drops</li>
+            <Link to="/">
+              <li className="mb-6 text-xl">Home</li>
+            </Link>
+            <Link to="/marketplace">
+              <li className="mb-6 text-xl">Marketplace</li>
+            </Link>
+            <Link to="/auctions">
+              <li className="mb-6 text-xl">Auctions</li>
+            </Link>
+            <Link to="/drop">
+              <li className="mb-6 text-xl">Drops</li>
+            </Link>
           </ul>
         </span>
         <span className="hidden md:block">
