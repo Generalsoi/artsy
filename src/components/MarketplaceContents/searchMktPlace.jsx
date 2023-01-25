@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "../../assets/images/searchbg.png";
 
-export const SearchMktPlace = () => {
+export const SearchMktPlace = ({ postsPerPage, totalPosts, currentPage }) => {
   return (
     <div className="mt-24 px-4 md:px-20 py-6 md:py-10 font-satoshi md:flex md:items-center">
       <span className="hidden md:block md:w-[20%]">
@@ -22,7 +22,9 @@ export const SearchMktPlace = () => {
         className="hidden md:flex items-center justify-between py-3 md:px-10 h-16 w-full bg-white rounded-xl"
         style={{ boxShadow: "4px 4px 64px rgba(0, 0, 0, 0.1)" }}
       >
-        <p className="hidden md:block">See 1-6 of 15 results</p>
+        <p className="hidden md:block">{`See ${
+          currentPage * postsPerPage - 5
+        }-${currentPage * postsPerPage} of ${totalPosts} results`}</p>
         <select
           name="sort-options"
           id="sort-options"
