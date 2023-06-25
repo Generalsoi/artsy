@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-export const Filter = ({ filterContent, filterStyles }) => {
+export const Filter = ({ categories, filterStyles }) => {
   const [open, setOpen] = useState(true);
   const [opentwo, setOpenTwo] = useState(true);
 
@@ -13,10 +13,6 @@ export const Filter = ({ filterContent, filterStyles }) => {
   const handleOpenTwo = () => {
     setOpenTwo(!opentwo);
   };
-
-  const Category = filterContent.ByCategory;
-  const Price = filterContent.ByPrice;
-  console.log(Category);
 
   return (
     <div className={filterStyles}>
@@ -36,10 +32,10 @@ export const Filter = ({ filterContent, filterStyles }) => {
 
         <ul className="mt-6">
           {open &&
-            Category?.map((category, index) => (
+            categories?.map((category, index) => (
               <li key={index} className="flex items-center gap-2 mb-3">
                 <input type="checkbox" />
-                {category}
+                {category?.name}
               </li>
             ))}
         </ul>
@@ -53,7 +49,7 @@ export const Filter = ({ filterContent, filterStyles }) => {
           By Price {opentwo ? <IoIosArrowUp /> : <IoIosArrowDown />}
         </h3>
 
-        <ul className="mt-6">
+        {/* <ul className="mt-6">
           {opentwo &&
             Price?.map((price, index) => (
               <li key={index} className="flex items-center gap-2 mb-3">
@@ -61,7 +57,7 @@ export const Filter = ({ filterContent, filterStyles }) => {
                 {price}
               </li>
             ))}
-        </ul>
+        </ul> */}
       </div>
       <div className="mt-10">
         <h3
